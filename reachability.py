@@ -2,6 +2,15 @@
 
 import sys
 
+def create_graph(graph=None):
+    n, m = map(int, sys.stdin.readline().split())
+    graph = {vertex: [] for vertex in range(1, n+1)}
+
+    for _ in range(m):
+        vert1, vert2 = map(int, sys.stdin.readline().split())
+        add_adge(graph(vertex1, vertex2))
+    return graph
+
 def reach(adj, x, y):
     #write your code here
     return 0
